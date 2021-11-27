@@ -1,0 +1,6 @@
+*.exe
+*.csproj
+bin/
+obj/
+*.vscode
+*.DS_Store
