@@ -1,10 +1,10 @@
 // Swift "Hello, World!" Program
-// To run this progran, just type in the terminal:
+// To run this program, just type in the terminal:
 
     // swift HelloWorld.swift
 
-// To run faster (complile with optimizations):
+// To run faster (compile with optimizations):
 
-    // swift -0 HelloWorls.swift
+    // swift -O HelloWorld.swift
 
 print("Hello, World!") 
