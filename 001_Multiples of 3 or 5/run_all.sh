@@ -41,3 +41,8 @@ cd ..
 csc Multiples_of_3_or_5.cs
 mono Multiples_of_3_or_5.exe
 rm Multiples_of_3_or_5.exe
+echo " "
+
+echo "Go"
+go run Multiples_of_3_or_5.go  
+echo " "

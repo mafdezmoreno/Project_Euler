@@ -37,3 +37,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 Sum: 23
 Sum: 233168
 Elapsed Time is 81.0000 ms
+
+#Go
+23 233168
+2021/11/29 23:29:33 Time: 31.875µs
