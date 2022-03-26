@@ -22,10 +22,13 @@ def add_numbers(str_long, str_short):
     carry = sum // 10
 
   #Rest of the digits of the larger number
+  
   for i in range(n_diff - 1, -1, -1):
     sum = int(str_long[i]) + carry
     result = str(sum % 10) + result
     carry = sum // 10
+    #print("n_diff")
+  
 
   #Add remaining carry
   if (carry > 0):
