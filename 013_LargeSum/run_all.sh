@@ -4,6 +4,12 @@ echo "|Python|"
 echo " "
 python3 LargeSum.py
 echo " "
+
+echo "|GO|"
+echo " "
+go run LargeSum.go
+echo " "
+
 : '
 echo "====="
 echo "|Cpp|"
