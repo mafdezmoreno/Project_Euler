@@ -24,3 +24,10 @@ echo "|Dart|"
 echo "======="
 dart run SumationOfPrimes.dart
 echo " "
+
+
+echo "======="
+echo "|GO|"
+echo "======="
+go run SumationOfPrimes.go
+echo " "

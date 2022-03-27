@@ -33,8 +33,7 @@ def sum_of_primes_until(value):
     return sum
 
 print(sum_of_primes_until(10))
-print(sum_of_primes_until(2_000_000))
-
+#print(sum_of_primes_until(2_000_000))
 
 end_time = time.time()
 print("%.6f ms" % ((end_time - start_time)*1000))

@@ -2,6 +2,7 @@
 
 1. Swift     623 ms
 2. C++       660 ms
+3. Go        673 ms
 3. Dart     1057 ms
 4. Python  31762 ms 
 
@@ -74,4 +75,13 @@ swift -O SumationOfPrimes.swift
 17
 142913828922
 623.294125 ms
+```
+
+# Go
+
+```
+go run SumationOfPrimes.go
+17
+142913828922
+2022/03/26 22:14:14 Time: 673.1895ms
 ```
