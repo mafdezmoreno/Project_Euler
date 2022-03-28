@@ -54,7 +54,8 @@ for x in range (1,len(sums)):
         #print(x)
         total +=x
 
-print('\n', total)
+print("Sum of numbers writables as sum of two abundant number: ")
+print(total)
 
 #! End of the program
 end_time = time.time()

@@ -35,14 +35,16 @@ func main() {
 
 	var sum uint = 0
 
+	// The index give the value of the sum, and the value of array (true or false) if the number is the sum of to abundant numbers
 	for i = 1; i < max; i++ {
 		if sum_two_abundant_list[i] == false {
 			sum += i
 		}
 	}
 
+	fmt.Println("Sum of numbers writables as sum of two abundant numbers: ")
 	fmt.Println(sum)
-	//*/
+
 	//! End of the program
 	elapsed := time.Since(start)
 	log.Printf("Time: %s", elapsed)
