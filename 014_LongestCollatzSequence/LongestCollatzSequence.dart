@@ -27,7 +27,7 @@ void main() {
   */
   get_largest_sequence(1000000);
   //! Final of the program
-  print('Executed in ${stopwatch.elapsed.inMilliseconds} ms');
+  print('Executed in ${stopwatch.elapsed.inMilliseconds / 1000} s');
 }
 
 List<int> get_largest_sequence(int max_value) {
