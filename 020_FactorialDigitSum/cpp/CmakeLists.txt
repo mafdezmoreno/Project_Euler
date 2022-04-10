@@ -1,0 +1,4 @@
+
+project(020_FactorialDigitSum)
+set(SOURCES 020_FactorialDigitSum.cpp src/bigint.cpp)
+add_executable(020_FactorialDigitSum ${SOURCES})

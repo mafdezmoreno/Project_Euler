@@ -1,0 +1,3 @@
+/Users/mafm/Desktop/ProjectEuler/020_FactorialDigitSum/cpp/build/CMakeFiles/020_FactorialDigitSum.dir
+/Users/mafm/Desktop/ProjectEuler/020_FactorialDigitSum/cpp/build/CMakeFiles/edit_cache.dir
+/Users/mafm/Desktop/ProjectEuler/020_FactorialDigitSum/cpp/build/CMakeFiles/rebuild_cache.dir
