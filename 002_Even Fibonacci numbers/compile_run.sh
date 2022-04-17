@@ -33,3 +33,7 @@ echo "## C#"
 
 dotnet script EvenFibonacciNumbers.csx
 echo " "
+
+echo "## Swift"
+swift -O EvenFibonacciNumbers.swift
+echo " "

@@ -3,6 +3,7 @@
 1. python        28 us 
 2. cpp           46 us
 2. go            48 us
+3. Swift         90 us
 4. F# Script    0.9 ms
 4. C# Script      3 ms
 6. C# Build      35 ms
