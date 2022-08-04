@@ -37,19 +37,23 @@ def factors(value, return_array):
 
     temp1=sqrt(value)
     temp2=int(temp1)
-    factors=[1,value]
+    #factors=[1,value]
+    counter = 2
     for i in range (2,temp2):
         if(value%i==0):
-            factors.append(i)
-            factors.append(value//i)
+            #factors.append(i)
+            #factors.append(value//i)
             #print(i, value//i)
+            counter+=2
     if(temp1==temp2):
-        factors.append(temp2)
+        #factors.append(temp2)
+        counter+=1
 
     if return_array:
         return factors
     
-    return len(factors)
+    #return len(factors)
+    return counter
 
 #print(factors(21, True))  #[1, 3, 7, 21]
 #print(factors(28, True))  #[1, 2, 4, 7, 14, 2]
@@ -70,7 +74,7 @@ def get_seventh_triangle_number_over_divisors(value):
     #return (seventh_value, factors(seventh_value, True))
     return seventh_value
 
-#print(get_seventh_triangle_number_over_divisors(5))      #28        //0.000033 s
+print(get_seventh_triangle_number_over_divisors(5))      #28        //0.000033 s
 #print(get_seventh_triangle_number_over_divisors(50))     #25200 //0.000904 s    //0.041302 s
 #print(get_seventh_triangle_number_over_divisors(100))   #73920      //0.203230 s
 #print(get_seventh_triangle_number_over_divisors(200))   #2031120  //0.049273 s  // 30.082121 s

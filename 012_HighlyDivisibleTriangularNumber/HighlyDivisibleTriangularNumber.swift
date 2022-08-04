@@ -52,25 +52,27 @@ func seventh_triangle_number(prev_seventh: UInt , prev_seventh_value:UInt , valu
 }
 
 
-func factors(value: UInt) -> [UInt]{
+func factors(value: UInt) -> UInt{//[UInt]{
 
     let temp1 = sqrt(Double(value))
     let temp2 = UInt(temp1)
-    var factors:[UInt] = [1, value];
-
+    //var factors:[UInt] = [1, value];
+    var counter:UInt = 2;
     if (temp2>=2){
         for i in 2..<temp2{
             if (value%i==0) {
-                factors.append(i);
-                factors.append(value/i);
+                //factors.append(i);
+                //factors.append(value/i);
+                counter = counter + 2;
             }
         }
     }
     if(temp1==Double(temp2)){
-        factors.append(temp2)
+        //factors.append(temp2)
+        counter+=1;
     }
-
-    return factors
+    //return factors
+    return counter
 }
 
 func get_seventh_triangle_number_over_divisors(value: UInt) -> UInt {
@@ -79,7 +81,7 @@ func get_seventh_triangle_number_over_divisors(value: UInt) -> UInt {
     var seventh_index:UInt = 1;
     while (true) {
         
-        let divisors = (factors(value:seventh_value)).count;
+        let divisors = (factors(value:seventh_value));//.count;
         if divisors >= value {
             break;
         }

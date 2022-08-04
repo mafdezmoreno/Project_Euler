@@ -1,38 +1,33 @@
 #!/bin/bash
-echo "======="
-echo "|Python|"
-echo "======="
+echo "## Python"
 python3 HighlyDivisibleTriangularNumber.py 
 echo " "
 
-echo "====="
-echo "|Cpp|"
-echo "====="
+echo "## Cpp"
 g++ -std=c++17 HighlyDivisibleTriangularNumber.cpp -o HighlyDivisibleTriangularNumber -O
 ./HighlyDivisibleTriangularNumber
 rm HighlyDivisibleTriangularNumber
 echo " "
 
-echo "======"
-echo "|Rust|"
-echo "======"
+echo "## C"
+gcc -std=c17 HighlyDivisibleTriangularNumber.c -o HighlyDivisibleTriangularNumber -O
+./HighlyDivisibleTriangularNumber
+rm HighlyDivisibleTriangularNumber
+echo " "
+
+echo "## Rust"
 rustc HighlyDivisibleTriangularNumber.rs -O
 ./HighlyDivisibleTriangularNumber
 rm  HighlyDivisibleTriangularNumber
 echo " "
 
-echo "======="
-echo "|Swift|"
-echo "======="
+echo "## Swift"
 swift -O HighlyDivisibleTriangularNumber.swift
 echo " "
 
-echo "======="
-echo "|Dart|"
-echo "======="
+echo "## Dart"
 #dart HighlyDivisibleTriangularNumber.dart
-#dart run HighlyDivisibleTriangularNumber.dart
+dart run HighlyDivisibleTriangularNumber.dart
 #dart compile exe HighlyDivisibleTriangularNumber.dart
 #./HighlyDivisibleTriangularNumber.exe
-/opt/homebrew/Cellar/dart-beta/2.15.0-268.18.beta/bin/dart run HighlyDivisibleTriangularNumber.dart
 echo " "

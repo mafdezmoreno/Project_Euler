@@ -16,43 +16,27 @@ We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred divisors?
 */
 
-#include <iostream>
+#include <stdio.h>
 #include <math.h>       /* sqrt */
-#include <chrono>
-#include <vector>
-using namespace std::chrono;
+#include <time.h>
 
 unsigned seventh_triangle_number(unsigned prev_seventh,unsigned prev_seventh_value,unsigned value);
-//std::vector<unsigned> factors(unsigned value);
 unsigned factors(unsigned value);
 unsigned get_seventh_triangle_number_over_divisors(unsigned value);
 
 int main(){
 
-    auto start = high_resolution_clock::now();
+    clock_t start = clock();
 
-    //! Real start of the program
-    
-    //auto prev_seventh_value = seventh_triangle_number(0,0,6);
-    //std::cout << prev_seventh_value << std::endl; //21
-    //std::cout << seventh_triangle_number(6,prev_seventh_value,7) << std::endl; //28
-
-    /*
-    std::cout << 21 << std::endl;
-    auto factor_vec = factors(21);
-    for (auto i: factor_vec)
-        std::cout << i << ' ';
-    std::cout<<std::endl;   //1 21 3 7 
-    */
+    //! Real start of the program 
   
-    std::cout<< get_seventh_triangle_number_over_divisors(5) << std::endl; //28 //0ms
-    std::cout<< get_seventh_triangle_number_over_divisors(500) << std::endl; //76576500 //132ms
+    printf("%d\n",get_seventh_triangle_number_over_divisors(5));
+    printf("%d\n",get_seventh_triangle_number_over_divisors(500));
 
     //! Final of the program
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<microseconds>(stop - start);
-  
-    std::cout << duration.count()/1000 << "ms"<< std::endl;
+    clock_t stop = clock();
+    double time_spent = (double)(stop - start) / CLOCKS_PER_SEC;
+    printf("Elapsed %.2f ms \n", time_spent*1000);
 
     return 0;
 }
@@ -65,27 +49,19 @@ unsigned seventh_triangle_number(unsigned prev_seventh,unsigned prev_seventh_val
     return seventh;
 }
 
-unsigned factors(unsigned value){
+unsigned factors_len(unsigned value){
 
-    long double temp1=sqrt(value);
-    unsigned int temp2=int(temp1);
-    //std::vector<unsigned> factors;
-    //factors.push_back(1);
-    //factors.push_back(value);
+    long double temp1 = sqrt(value);
+    unsigned temp2 = (int)temp1;
     unsigned counter = 2;
-
     for (unsigned i=2; i<temp2; i++){
         if(value%i==0){
             counter = counter + 2;
-            //factors.push_back(i);
-            //factors.push_back(floor(value/i));
         }
     }
     if(temp1==temp2)
         counter++;
-        //factors.push_back(temp2);
 
-    //return factors;
     return counter;
 }
 
@@ -96,9 +72,7 @@ unsigned get_seventh_triangle_number_over_divisors(unsigned value){
     unsigned seventh_value = 1;
     unsigned seventh_index = 1;
     while(1){
-        //auto temp = factors(seventh_value);
-        //divisors = temp.size();
-        divisors = factors(seventh_value);
+        divisors = factors_len(seventh_value);
         if (divisors >= value)
             break;
         seventh_index++;

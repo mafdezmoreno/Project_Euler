@@ -33,7 +33,7 @@ int main() {
   print(factor_vec); //1 21 3 7 // 3ms
   */
 
-  //print(get_seventh_triangle_number_over_divisors(5)); //28 //0ms
+  print(get_seventh_triangle_number_over_divisors(5)); //28 //0ms
   print(get_seventh_triangle_number_over_divisors(500)); //76576500 //132ms
 
   //! Final of the program
@@ -50,21 +50,26 @@ int seventh_triangle_number(
   return seventh;
 }
 
-List factors(int value) {
+int factors(int value) {
   double temp1 = sqrt(value);
   int temp2 = temp1.toInt();
-  var factors = [];
-  factors.add(1);
-  factors.add(value);
-
+  //var factors = [];
+  //factors.add(1);
+  //factors.add(value);
+  int counter = 2;
   for (var i = 2; i < temp2; i++) {
     if (value % i == 0) {
-      factors.add(i);
-      factors.add(value ~/ i);
+      //factors.add(i);
+      //factors.add(value ~/ i);
+      counter = counter +2;
     }
   }
-  if (temp1 == temp2) factors.add(temp2.toInt());
-  return factors;
+  if (temp1 == temp2) {
+    //factors.add(temp2.toInt());
+    counter++;
+  }
+  //return factors;
+  return counter;
 }
 
 int get_seventh_triangle_number_over_divisors(int value) {
@@ -72,8 +77,9 @@ int get_seventh_triangle_number_over_divisors(int value) {
   int seventh_value = 1;
   int seventh_index = 1;
   while (true) {
-    var temp = factors(seventh_value);
-    divisors = temp.length;
+    //var temp = factors(seventh_value);
+    // divisors = temp.length;
+    divisors = factors(seventh_value);
     if (divisors >= value) break;
     seventh_index++;
     seventh_value = seventh_triangle_number(

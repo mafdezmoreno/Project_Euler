@@ -21,8 +21,6 @@ fn main(){
     use std::time::Instant;
     let now = Instant::now();
 
-
-
     // Real start of the program
     /*
     let prev_seventh_value = seventh_triangle_number(0,0,6);
@@ -51,25 +49,29 @@ fn seventh_triangle_number(prev_seventh:u32 , prev_seventh_value:u32 , value:u32
     seventh
 }
 
-fn factors(value: u32)->Vec<u32>{
+fn factors(value: u32)->u32{//Vec<u32>{
 
     let temp1:u32 = (value as f32).sqrt() as u32;
     let temp2:u32 = temp1 as u32;
-    let mut factors:Vec<u32> = Vec::new();
+    //let mut factors:Vec<u32> = Vec::new();
     
-    factors.push(1);
-    factors.push(value);
+    //factors.push(1);
+    //factors.push(value);
+    let mut counter:u32 = 2;
 
     for i in 2..temp2{
         if value%i==0 {
-            factors.push(i);
-            factors.push(value/i);
+            //factors.push(i);
+            //factors.push(value/i);
+            counter = counter + 2;
         }
     }
     if temp1==temp2 {
-        factors.push(temp2);
+        //factors.push(temp2);
+        counter += 1;
     }
-    factors
+    //factors
+    counter
 }
 
 fn get_seventh_triangle_number_over_divisors(value: u32) -> u32 {
@@ -78,7 +80,7 @@ fn get_seventh_triangle_number_over_divisors(value: u32) -> u32 {
     let mut seventh_index:u32 = 1;
     loop {
         
-        let divisors = factors(seventh_value).len() as u32;
+        let divisors = factors(seventh_value);//factors(seventh_value).len() as u32;
         if divisors >= value {
             break;
         }
