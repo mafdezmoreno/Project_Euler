@@ -23,8 +23,6 @@ func multiples(value: Int) -> Int {
     return sum
 }
 
-
-
 let a = multiples(value: 10)
 let b = multiples(value: 1000)
 

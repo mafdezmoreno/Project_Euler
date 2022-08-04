@@ -5,30 +5,29 @@
  * Find the sum of all the multiples of 3 or 5 below 1000.
  *
  */
-#include <iostream>
-#include <chrono>
-#include <vector>
-using namespace std::chrono;
+#include <stdio.h>
+#include <time.h>
 
 int multiples(int value);
 
 int main() {
-    auto start = high_resolution_clock::now();
+
+    clock_t start = clock();
 
     //! Real start of the program
     int a = multiples(10);
     int b = multiples(1000);
     
-    std::cout << "Multiples Test 1" << std::endl;
-    std::cout<< a << std::endl;
-    std::cout << "Multiples Test 2" << std::endl;
-    std::cout<< b << std::endl;
+    printf("Multiples Test 1: ");
+    printf("%d\n", a);
+    printf("Multiples Test 2: ");
+    printf("%d\n", b);
 
     //! Final of the program
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<microseconds>(stop - start);
-  
-    std::cout << duration.count() << "us"<< std::endl;
+    clock_t end = clock();
+    double time_spent = (double)(end - start) / CLOCKS_PER_SEC;
+    printf("Elapsed %.2f us \n", time_spent*1000000);
+
     return 0;
 }
 
